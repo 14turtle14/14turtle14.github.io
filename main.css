@@ -1,0 +1,55 @@
+.intro{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+    line-height: 100%;
+    font-weight: bold;
+    text-align: center;
+    background-color: darkblue;
+    color: aliceblue;
+    text-indent: initial;
+    word-spacing: normal;
+    letter-spacing: unset;
+    font-style: unset;
+    text-decoration: darkgoldenrod;
+    text-transform: full-size-kana;
+}
+
+.nav {
+    color: blue;
+    text-decoration: underline;
+}
+
+.nav:hover{
+    cursor: pointer;
+    color: red;
+    text-decoration-color: blue;
+}
+
+.body {
+    background-color: beige;
+}
+
+.aside {
+    text-align: center;
+}
+
+.search {
+}
+
+.reviews {
+}
+
+.other {
+}
+
+.info {
+}
+
+.footer {
+    background: url('img/footer_lines.jpeg') no-repeat;
+    color: lavenderblush;
+    background-size: cover;
+}
+
+.header {
+}
