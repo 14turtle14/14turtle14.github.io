@@ -1,36 +1,20 @@
-.intro{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 200%;
-    line-height: 100%;
-    font-weight: bold;
-    text-align: center;
-    background-color: darkblue;
-    color: aliceblue;
-    text-indent: initial;
-    word-spacing: normal;
-    letter-spacing: unset;
-    font-style: unset;
-    text-decoration: darkgoldenrod;
-    text-transform: full-size-kana;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
 
 .nav {
-    color: blue;
-    text-decoration: underline;
+    text-align: center;
 }
 
-.nav:hover{
-    cursor: pointer;
-    color: red;
-    text-decoration-color: blue;
+a{
+    color: white;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
 }
-
-.body {
-    background-color: beige;
+a:hover{
+    color:yellowgreen;
 }
 
 .aside {
-    text-align: center;
 }
 
 .search {
@@ -49,7 +33,52 @@
     background: url('img/footer_lines.jpeg') no-repeat;
     color: lavenderblush;
     background-size: cover;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
 }
 
 .header {
+    font-family: 'Rubik', sans-serif;
+    border-style: none;
+    display: grid;
+    min-height: 200%;
+    background: url('img/footer_lines.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.links {
+    color: black;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+.links:hover{
+    color:red;
+}
+html{
+    background: white;
+    max-width: 75%;
+    margin: auto;
+}
+body{
+    background: whitesmoke;
+}
+
+.telegram{
+    color:white;
+    font-weight: bold;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+.telegram:hover{
+    color: skyblue;
+}
+
+.ol {
+    list-style-type: revert;
+}
+
+.ul {
+    list-style-type: circle;
 }
