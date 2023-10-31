@@ -10,60 +10,52 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="body">
-<header class="header">
-        <nav class="nav">
-            <a href="#">Поиск по предметам</a>
-            <a href="#">Олимпиады</a>
-            <a href="#">Поиск по городу</a>
+<body class="main-page">
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <a href="#" class="main-link main-link-nav">Поиск по предметам</a>
+            <a href="#" class="main-link main-link-nav">Олимпиады</a>
+            <a href="#" class="main-link main-link-nav">Поиск по городу</a>
         </nav>
-</header>
-<main>
-    <article class = "citat">
-        <blockquote>
-            <p>
+    </header>
+    <main class="main-base">
+        <blockquote class="main-base__quote">
+            <p class="main-quote__text main-text">
                 <q>Кто пренебрегает учебой в юности, тот теряет прошлое и мертв для будущего</q>.
                 Эврипид
             </p>
         </blockquote>
-    </article>
-    <aside class="aside">
-            <p>Мы подберем вам ВУЗ</p>
-            <p>Опишем каждое направление</p>
-            <p>Расскажем о внутряках</p>
-    </aside>
-    <section class="search">
-        <h3>
-            Чтобы поиск был более детальным, выполните пункты ниже:    </h3>
-        <ol class="ol">
-            <li>Введите свои баллы ЕГЭ</li>
-            <li>Выберите город или города рассматриваемые для поступления</li>
-            <li>Выберите специальность</li>
-        </ol>
-    </section>
-    <section class="reviews">
-        <h3>
-            Если вы студент ВУЗа, напишите <strong>ЧЕСТНЫЙ</strong> отзыв о своем учебном учреждении, опираясь на пукнты ниже:
-        </h3>
-        <ul class="ul">
-            <li>Зайдите на страницу своего вуза</li>
-            <li>Найдите раздел "Отзывы"</li>
-            <li>Напишите подробно о своем вузе в научно-публицистическом стиле речи, избегая неприемлемых слов</li>
-        </ul>
-    </section>
-    <section class="other">
-        <article>
-            <h4>
-                <a class="links" href = "#">Отзывы</a>
-            </h4>
-            <h4>
-                <a class="links" href = "#">Договор</a>
-            </h4>
-        </article>
-    </section>
-</main>
-<footer class="footer">
-    <article class="info">
+        <aside class="main-base__intro">
+                <p class ="main-text main-intro__text">Мы подберем вам ВУЗ</p>
+                <p class ="main-text main-intro__text">Опишем каждое направление</p>
+                <p class ="main-text main-intro__text">Расскажем о <q>внутряках</q></p>
+        </aside>
+        <section class="main-base__info">
+            <h3 class="main-info__head main-head">
+                Чтобы поиск был более детальным, выполните пункты ниже:
+            </h3>
+            <ol class="main-info__list">
+                <li class="main-text main-list__text">Введите свои баллы ЕГЭ</li>
+                <li class="main-text main-list__text">Выберите город или города рассматриваемые для поступления</li>
+                <li class="main-text main-list__text">Выберите специальность</li>
+            </ol>
+        </section>
+        <section class="main-base__review">
+            <h3 class="main-review__head main-head">
+            Если вы студент ВУЗа, напишите <strong>ЧЕСТНЫЙ</strong> отзыв о своем учебном учреждении, опираясь на пункты ниже:
+            </h3>
+            <ul class="main-review__text">
+                <li class="main-text main-review__text">Зайдите на страницу своего вуза</li>
+                <li class="main-text main-review__text">Найдите раздел "Отзывы"</li>
+                <li class="main-text main-review__text">Напишите подробно о своем вузе в научно-публицистическом стиле речи, избегая неприемлемых слов</li>
+            </ul>
+        </section>
+        <section class="main-base__other">
+            <a class="main-other__link" href = "#">Отзывы</a>
+            <a class="links" href = "#">Договор</a>
+        </section>
+    </main>
+    <footer class="footer">
         <h4>Контакты:</h4>
         <p>
             Telegram:
@@ -71,7 +63,6 @@
         </p>
         <p> Phone: +79811412301</p>
         <p> Email: super.ivannikov2013@yandex.ru </p>
-    </article>
 </footer>
 </body>
 </html>
