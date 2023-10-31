@@ -1,43 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
 
-.nav {
-    text-align: center;
+.main-page{
+    background: whitesmoke;
 }
 
-a{
-    color: white;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    text-decoration: none;
-}
-a:hover{
-    color:yellowgreen;
-}
-
-.aside {
-}
-
-.search {
-}
-
-.reviews {
-}
-
-.other {
-}
-
-.info {
-}
-
-.footer {
-    background: url('img/footer_lines.jpeg') no-repeat;
-    color: lavenderblush;
-    background-size: cover;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-}
-
-.header {
+.main-header {
     font-family: 'Rubik', sans-serif;
     border-style: none;
     display: grid;
@@ -46,22 +13,70 @@ a:hover{
     background-size: cover;
 }
 
-.links {
-    color: black;
+.main-header__nav {
+    text-align: center;
+    border: solid;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.aside {
+    text-align: center;
+    border: solid;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.main-link-nav{
+    color: white;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     text-decoration: none;
 }
-.links:hover{
-    color:red;
+
+.search {
+    text-align: left;
+    border: 10px inset lightblue;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
 }
-html{
-    background: white;
-    max-width: 75%;
-    margin: auto;
+
+.reviews {
+    text-align: left;
+    border: solid;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
 }
-body{
-    background: whitesmoke;
+
+.other {
+    text-align: center;
+    border: solid;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footer {
+    background: url('img/footer_lines.jpeg') no-repeat;
+    color: lavenderblush;
+    background-size: cover;
+    text-align: center;
+    border: solid;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.main_link {
+    color: black;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
 }
 
 .telegram{
