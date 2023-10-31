@@ -1,99 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
 
-.main-page{
+.home-page{
     background: whitesmoke;
+    color: #000033;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
-.main-header {
+.home-header {
     font-family: 'Rubik', sans-serif;
-    border-style: none;
     display: grid;
-    min-height: 200%;
-    background: url('img/footer_lines.jpeg') no-repeat;
-    background-size: cover;
+    background: #000033;
 }
 
-.main-header__nav {
+.home-header__nav {
     text-align: center;
-    border: solid;
-    margin: 1rem;
-    padding: 1rem;
+    border: none;
+    margin: 30px;
+    padding: 0;
     font-family: 'Rubik', sans-serif;
 }
 
-
-.aside {
-    text-align: center;
-    border: solid;
-    margin: 1rem;
-    padding: 1rem;
-    font-family: 'Rubik', sans-serif;
+.home-link {
+    color: black;
+    font-size:18px;
 }
 
-.main-link-nav{
+.home-link_nav{
     color: white;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     text-decoration: none;
 }
 
-.search {
-    text-align: left;
-    border: 10px inset lightblue;
-    margin: 1rem;
-    padding: 1rem;
-    font-family: 'Rubik', sans-serif;
+.home-link_nav:hover{
+    color: darkgreen;
 }
 
-.reviews {
-    text-align: left;
-    border: solid;
-    margin: 1rem;
-    padding: 1rem;
-    font-family: 'Rubik', sans-serif;
-}
-
-.other {
+.home-base {
     text-align: center;
-    border: solid;
-    margin: 1rem;
-    padding: 1rem;
+    border: none;
+    margin: 0;
+    padding-left: 14rem;
+    padding-right: 14rem;
     font-family: 'Rubik', sans-serif;
 }
 
-.footer {
-    background: url('img/footer_lines.jpeg') no-repeat;
-    color: lavenderblush;
+.home-base__quote {
+    text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: #000033;
+}
+
+.home-footer {
+    background: #000033;
+    color: white;
     background-size: cover;
-    text-align: center;
-    border: solid;
-    margin: 1rem;
+    border: none;
+    margin: 0;
     padding: 1rem;
     font-family: 'Rubik', sans-serif;
+    display: grid;
 }
 
-.main_link {
-    color: black;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    text-decoration: none;
-}
-
-.telegram{
+.home-link_footer{
     color:white;
     font-weight: bold;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     text-decoration: none;
 }
-.telegram:hover{
+
+.home-link_footer:hover{
     color: skyblue;
 }
 
-.ol {
-    list-style-type: revert;
+.home-base__info {
+    text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
 }
 
-.ul {
-    list-style-type: circle;
+.home-info__head {
+    text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-info__list {
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-list__item {
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-base__review {
+    text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-review__head {
+    text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-review__list {
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-base__other {
+    text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.home-link_other {
+    color: #000033;
+    text-align: center;
+    border: rosybrown solid;
+    background-color: peachpuff;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.home-link_other:hover {
+    color: white;
+}
+
+.home-footer__head {
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px
+}
+
+.home-footer__text {
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding-left: 1rem;
+    font-family: 'Rubik', sans-serif;
 }
