@@ -6,13 +6,11 @@
     border: none;
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
 }
 
 .home-header {
-    font-family: 'Rubik', sans-serif;
     display: grid;
-    background: #000033;
+    background: linear-gradient(to right, #000033, darkblue);
 }
 
 .home-header__nav {
@@ -20,19 +18,25 @@
     border: none;
     margin: 30px;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
+    text-indent: 0;
 }
 
 .home-link {
     color: black;
     font-size:18px;
+    text-indent: 0;
+    word-spacing: 0;
 }
 
 .home-link_nav{
     color: white;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    transition: 0.5s all ease;
     text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-style: initial;
 }
 
 .home-link_nav:hover{
@@ -40,12 +44,10 @@
 }
 
 .home-base {
-    text-align: center;
     border: none;
     margin: 0;
     padding-left: 14rem;
     padding-right: 14rem;
-    font-family: 'Rubik', sans-serif;
 }
 
 .home-base__quote {
@@ -56,29 +58,22 @@
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     color: #000033;
+    text-transform: none;
+    font-weight: 1000;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 1px;
+    font-style: initial;
 }
 
 .home-footer {
-    background: #000033;
+    background: linear-gradient(to right, #000033, darkblue);
     color: white;
     background-size: cover;
     border: none;
     margin: 0;
     padding: 1rem;
-    font-family: 'Rubik', sans-serif;
     display: grid;
-}
-
-.home-link_footer{
-    color:white;
-    font-weight: bold;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    text-decoration: none;
-}
-
-.home-link_footer:hover{
-    color: skyblue;
 }
 
 .home-base__info {
@@ -86,15 +81,10 @@
     border: none;
     margin: 1rem;
     padding: 1rem;
-    font-family: 'Rubik', sans-serif;
 }
 
 .home-info__head {
-    text-align: center;
-    border: none;
-    margin: 1rem;
-    padding: 1rem;
-    font-family: 'Rubik', sans-serif;
+    color: #000033;
 }
 
 .home-info__list {
@@ -102,7 +92,6 @@
     border: none;
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
 }
 
 .home-list__item {
@@ -111,30 +100,53 @@
     margin: 0;
     padding: 1rem;
     font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-indent: 0;
+    word-spacing: 0;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-style: initial;
 }
 
 .home-base__review {
-    text-align: center;
     border: none;
     margin: 1rem;
     padding: 1rem;
-    font-family: 'Rubik', sans-serif;
 }
 
 .home-review__head {
+    color: #000033;
+}
+
+.home-head{
     text-align: center;
     border: none;
     margin: 1rem;
     padding: 1rem;
     font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 1px;
+    font-style: initial;
+    text-transform: none;
+}
+
+.home-footer__head {
+    text-align: left;
+    margin: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 0;
+    font-size: 18px;
 }
 
 .home-review__list {
-    text-align: center;
     border: none;
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
 }
 
 .home-base__other {
@@ -142,7 +154,9 @@
     border: none;
     margin: 1rem;
     padding: 1rem;
-    font-family: 'Rubik', sans-serif;
+    text-indent: 0;
+    color: #000033;
+    background-color: whitesmoke;
 }
 
 .home-link_other {
@@ -154,22 +168,30 @@
     padding: 1rem;
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    transition: 0.5s all ease;
+    box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-style: initial;
+    text-transform: none;
+}
+
+.home-link_footer{
+    color:white;
+    font-weight: normal;
+    transition: 0.5s all ease;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+    font-style: initial;
+    text-transform: none;
+    word-spacing: 0;
 }
 
 .home-link_other:hover {
-    color: white;
-}
-
-.home-footer__head {
-    text-align: left;
-    border: none;
-    margin: 0;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px
+    color: whitesmoke;
 }
 
 .home-footer__text {
@@ -178,4 +200,30 @@
     margin: 0;
     padding-left: 1rem;
     font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 1px;
+    font-style: initial;
+    text-transform: none;
+}
+
+.home-base__img {
+    border: none;
+    margin: 0;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.home-img {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border: none;
+    margin: 0;
+    padding-left: 0;
+    width: 60%;
+}
+
+.home-link_footer:hover{
+    color: skyblue;
 }
