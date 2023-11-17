@@ -16,14 +16,14 @@
 .home-header__nav {
     text-align: center;
     border: none;
-    margin: 30px;
-    padding: 0;
+    margin: 0.5vw;
+    padding: 0.5vh;
     text-indent: 0;
 }
 
 .home-link {
     color: black;
-    font-size:18px;
+    font-size:1.125rem;
     text-indent: 0;
     word-spacing: 0;
 }
@@ -35,8 +35,9 @@
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     text-transform: none;
-    letter-spacing: 1px;
-    padding: 0.5rem;
+    letter-spacing: 0.0625rem;
+    margin: 0.5vw;
+    padding: 0.5vh;
     font-style: initial;
 }
 
@@ -47,15 +48,14 @@
 .home-base {
     border: none;
     margin: 0;
-    padding-left: 14rem;
-    padding-right: 14rem;
+    padding-left: 10vh;
+    padding-right: 10vh;
 }
 
-.home-base__quote {
+.home-base__welcome {
     text-align: center;
     border: none;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 2vw;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     color: #000033;
@@ -63,7 +63,7 @@
     font-weight: 1000;
     text-indent: 0;
     word-spacing: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     font-style: initial;
 }
 
@@ -77,19 +77,31 @@
     display: grid;
 }
 
-.home-base__info {
+.home-base__introduction {
     text-align: center;
     border: none;
     margin: 1rem;
     padding: 1rem;
 }
 
-.home-info__head {
-    color: #000033;
+.home-introduction__header {
+    text-align: center;
+    border: none;
+    margin: 0.5vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0.0625rem;
+    font-style: initial;
+    text-transform: none;
 }
 
-.home-info__list {
+.home-introduction__list {
+    position: relative;
     text-align: left;
+    list-style-type: none;
     border: none;
     margin: 0;
     padding: 0;
@@ -99,38 +111,41 @@
     text-align: left;
     border: none;
     margin: 0;
-    padding: 1rem;
+    padding: 1vh;
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: normal;
     text-indent: 0;
     word-spacing: 0;
     text-transform: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     font-style: initial;
 }
 
-.home-base__review {
+.home-searching__header {
+    text-align: center;
     border: none;
-    margin: 1rem;
-    padding: 1rem;
-}
-
-.home-review__head {
-    color: #000033;
+    margin: 0.5vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0.0625rem;
+    font-style: initial;
+    text-transform: none;
 }
 
 .home-head{
     text-align: center;
     border: none;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0.5vw;
     font-family: 'Rubik', sans-serif;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: bolder;
     text-indent: 0;
     word-spacing: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     font-style: initial;
     text-transform: none;
 }
@@ -144,58 +159,64 @@
     font-size: 18px;
 }
 
-.home-review__list {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.home-base__other {
-    text-align: center;
-    border: none;
-    margin: 1rem;
-    padding: 1rem;
-    text-indent: 0;
-    color: #000033;
-    background-color: whitesmoke;
-}
-
-.home-link_other {
-    color: #000033;
-    text-align: center;
-    border: rosybrown solid;
-    background-color: peachpuff;
-    margin: 1rem;
-    padding: 1rem;
-    font-family: 'Rubik', sans-serif;
-    text-decoration: none;
-    transition: 0.5s all ease;
-    box-shadow:  0 5px 10px 0 rgba(0, 0, 0, 0.5);
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-style: initial;
-    text-transform: none;
-}
 
 .home-link_footer{
     color:white;
     font-weight: normal;
     transition: 0.5s all ease;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Rubik', sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     font-style: initial;
     text-transform: none;
     word-spacing: 0;
 }
 
-.home-link_other:hover {
-    color: whitesmoke;
+.home-footer__text {
+    text-align: left;
+    border: none;
+    margin: 0;
+    padding-left: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0.0625rem;
+    font-style: initial;
+    text-transform: none;
 }
 
-.home-footer__text {
+.home-base__img {
+    border: none;
+    margin: 0;
+    text-align: center;
+}
+
+.home-img {
+    box-shadow: 0 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.5);
+    border: none;
+    margin: 0;
+    padding-left: 0;
+    width: 60%;
+}
+
+.home-link_footer:hover{
+    color: skyblue;
+}
+
+.home-header__list {
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 0;
+    font-size: 1rem;
+}
+
+.home-text__list {
     text-align: left;
     border: none;
     margin: 0;
@@ -205,26 +226,61 @@
     font-weight: normal;
     text-indent: 0;
     word-spacing: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     font-style: initial;
     text-transform: none;
 }
 
-.home-base__img {
-    border: none;
-    margin: 0;
-    padding-left: 1rem;
+.home-base__searching {
     text-align: center;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
 }
 
-.home-img {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+.home-base__outro {
+    text-align: center;
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0.0625rem;
+    font-style: initial;
+    text-transform: none;
+}
+
+.home-searching__list {
+    list-style-type: none;
+    text-align: left;
     border: none;
     margin: 0;
-    padding-left: 0;
-    width: 60%;
+    padding: 0;
 }
 
-.home-link_footer:hover{
-    color: skyblue;
+.home-item__header {
+    text-align: left;
+    border: none;
+    margin: 0.5vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.125rem;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0.0625rem;
+    font-style: initial;
+    text-transform: none;
+}
+
+.home-item__text {
+    text-align: left;
+    border: none;
+    margin: 0.5vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0.0625rem;
+    font-style: initial;
+    text-transform: none;
 }
