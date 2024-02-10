@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222222;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    grid-row: 1;
+    width: 100vw;
+    justify-content: left;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+footer {
+    grid-row: 3;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
+    align-items: flex-end;
+    font-family: "Cinzel", sans-serif;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header ul li {
+    margin-right: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 28px;
+    font-family: "Cinzel", sans-serif;
+    padding: 0.1em;
+}
+
+header ul li a:hover {
+    color: #555;
+}
+
+.logo img {
+    height: auto;
+    width: 100px;
+}
+
+.logo {
+    order: -1;
+    margin-right: 3vh;
+}
+
+.logo:hover{
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+}
+
+.main-content {
+    grid-row: 2;
+    background-color: white;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    text-align: left ;
+    flex-grow: 1;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.contact-info ul li{
+    margin-right: 20px;
+}
+
+.contact-info li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info li a:hover {
+    color: #555555;
+}
+
+.table-container{
+    font-family: "Overpass", sans-serif;
+    display: grid;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.progress-schedule {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.progress-schedule caption {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.progress-schedule th, .progress-schedule td {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    width: 900px;
+
+}
+
+.day:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eae4e4;
+}
+
+.day td {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    header, footer {
+        padding: 20px;
+    }
+
+    header nav ul li {
+        margin-right: 10px;
+    }
+
+    .overlay{
+        text-align: center;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .table-container{
+        padding-top: 30vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    header nav ul li {
+        margin-right: 10px;
+    }
+
+    .overlay{
+        text-align: center;
+    }
+
+    .logo{
+        display: none;
+    }
+}

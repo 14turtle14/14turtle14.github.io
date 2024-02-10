@@ -1,89 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #222222;
-    color: #111;
-    display: grid;
-    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    grid-row: 1;
+    width: 100vw;
+    justify-content: left;
     background-color: #222;
-    color: #fff; /* Black text color */
-    padding: 10px;
+    color: #fff;
+    padding: 10px 10px;
     text-align: center;
-    grid-row: 1; /* Первая строка сетки */
-    display: flex; /* Используем flexbox */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    position: absolute;
+    flex-wrap: wrap;
 }
-
-nav {
-    background-color: #222; /* Gold background for navigation */
-    display: flex; /* Растягиваем элементы внутри навигации по горизонтали */
-    padding: 10px 20px; /* Добавляем отступы */
-    font-size: 28px;
-    font-family: "Cinzel", sans-serif;
-    justify-content: space-evenly;
-    z-index: 2;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; /* Убираем внешние отступы */
-    display: flex; /* Растягиваем список по горизонтали */
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #fff; /* Черный текст */
-    font-weight: bold; /* Делаем текст жирным */
-    transition: color 0.3s ease-in-out; /* Плавный переход цвета */
-}
-
-nav ul li a:hover {
-    color: #555; /* Красный текст при наведении */
-}
-
-
-/* Main content styles */
-.main-content {
-    grid-row: 2; /* Вторая строка сетки */
-    background-color: white;
-    padding-bottom: 100px; /* Высота закрепленного элемента + небольшой дополнительный отступ */
-}
-
 
 footer {
     grid-row: 3;
-    background-color: #222; /* Gold background for navigation */
-    display: flex; /* Растягиваем элементы внутри навигации по горизонтали */
-    justify-content: left; /* Выравниваем элементы по левому краю */
-    padding: 10px 20px; /* Добавляем отступы */
-    align-items: flex-start; /* Выравниваем элементы по верхнему краю */
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
+    align-items: flex-end;
     font-family: "Cinzel", sans-serif;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header ul li {
+    margin-right: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 28px;
+    font-family: "Cinzel", sans-serif;
+    padding: 0.1em;
+}
+
+header ul li a:hover {
+    color: #555;
+}
+
+.logo img {
+    height: auto;
+    width: 100px;
+}
+
+.logo {
+    order: -1;
+    margin-right: 3vh;
+}
+
+.logo:hover{
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+}
+
+.main-content {
+    grid-row: 2;
+    background-color: white;
 }
 
 .contact-info {
     list-style-type: none;
     padding: 0;
-    display: flex; /* Растягиваем список по горизонтали */
-    text-align: left ; /* Выравниваем текст по левому краю */
-    flex-grow: 1; /* Растягиваем элемент по горизонтали */
+    display: flex;
+    text-align: left ;
+    flex-grow: 1;
 }
-
 
 .contact-info ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Убираем внешние отступы */
-    display: flex; /* Растягиваем список по горизонтали */
+    margin: 0;
+    display: flex;
 }
 
 .contact-info ul li{
@@ -91,20 +101,14 @@ footer {
 }
 
 .contact-info li a {
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #ffffff; /* Черный текст */
-    font-weight: bold; /* Делаем текст жирным */
-    transition: color 0.3s ease-in-out; /* Плавный переход цвета */
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .contact-info li a:hover {
-    color: #555555; /* Красный текст при наведении */
-}
-
-.main-content {
-    padding: 0;
-    grid-row: 2; /* Вторая строка сетки */
-    background-color: white;
+    color: #555555;
 }
 
 .overlay {
@@ -117,69 +121,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     color: #fff;
     font-size: 60px;
-    padding: 10px; /* Добавим отступы для текста */
-    box-sizing: border-box; /* Учитываем отступы внутри размеров блока */
+    box-sizing: border-box;
     font-weight: bold;
 }
 
 .introduction {
     text-align: center;
     font-family: "Overpass", sans-serif;
-}
-
-.responsive-table {
-    display: grid;
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table-container{
-    font-family: "Cinzel", sans-serif;
-    padding-top: 10%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-}
-
-.progress-schedule {
-    width: 100%;
-    border-collapse: collapse;
-    display: grid;
-    grid-auto-rows: auto;
-}
-
-@media (max-width: 768px) {
-    .nav {
-        position: relative;
-        width: auto;
-    }
-}
-
-.progress-schedule caption {
-    font-size: 24px;
-    font-weight: bold;
-    padding-bottom: 10px;
-}
-
-.progress-schedule th, .progress-schedule td {
-    border: none;
-    padding: 10px;
-    text-align: center;
-    height: 50px;
-    width: 900px;
-
-}
-
-.day:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #eae4e4;
-}
-
-.day td {
-    padding: 10px;
+    padding: 2vw;
 }
 
 .functionality_header{
@@ -206,13 +157,43 @@ footer {
     text-align: left;
 }
 
-.logo img {
-    order: -1;
-    margin-right: 20px;
-    width: 100px;
-    height: auto;
+.reasons {
+    padding: 1%;
 }
 
-.logo:hover{
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+.functionality{
+    padding: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+    header, footer {
+        padding: 20px;
+    }
+
+    header nav ul li {
+        margin-right: 10px;
+    }
+
+    .overlay{
+        text-align: center;
+    }
+
+    .logo{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    header nav ul li {
+        margin-right: 10px;
+    }
+
+    .overlay{
+        text-align: center;
+    }
+
+    .logo{
+        display: none;
+    }
 }
