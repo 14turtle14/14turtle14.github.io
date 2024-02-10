@@ -197,3 +197,22 @@ header ul li a:hover {
         display: none;
     }
 }
+
+.page-loading {
+    list-style-type: none;
+    display: flex;
+    text-align: right;
+    padding-right: 1%   ;
+}
+
+#loading-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: white;
+}
+
+header nav ul li a.active {
+    color: #ff0000;
+}
