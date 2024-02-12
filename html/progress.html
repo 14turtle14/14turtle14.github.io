@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <title>Progress</title>
-        <meta name="description" content="See your progress" />
-        <link rel="stylesheet" href="/css/progress.css">
-        <meta name="robots" content="index, nofollow" />
-        <meta name="yandex" content="noyaca" />
-        <script src="/js/pageLoadStats.js"></script>
-        <script src="/js/activeWindow.js" defer></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Иванников Даниил" />
+    <meta charset="UTF-8">
+    <title>Progress</title>
+    <meta name="description" content="See your progress" />
+    <link rel="stylesheet" href="/css/progress.css">
+    <meta name="robots" content="index, nofollow" />
+    <meta name="yandex" content="noyaca" />
+    <script src="/js/pageLoadStats.js"></script>
+    <script src="/js/activeWindow.js" defer></script>
+    <script src="/js/form.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ivannikov Dannil" />
 </head>
 <body>
 <header>
     <div class="logo">
-        <a href="https://ru.wikipedia.org/wiki/Китайский_дракон" target="_blank"><img src="/image/red_dragon_white_background.jpg" alt="Logo"></a>
+        <a href="https://ru.wikipedia.org/wiki/Китайский_дракон" target="_blank"> <img src="/image/red_dragon_white_background.jpg" alt="Logo"></a>
     </div>
     <nav>
         <ul>
@@ -24,59 +25,25 @@
             <li><a href="#">Learning</a></li>
             <li><a href="#">Materials</a></li>
             <li><a href="#">Culture</a></li>
-            <li><a href="#">Donation</a></li>
+            <li><a href="donation.html">Donation</a></li>
         </ul>
     </nav>
 </header>
 <main class="main-content">
-    <div class="table-container">
-        <table class="progress-schedule">
-            <caption>Progress Table</caption>
-            <thead>
-            <tr class="top">
-                <th class="table">Day of week</th>
-                <th class="table">Tasks completed</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="day">
-                <td>Monday</td>
-                <td>2</td>
-            </tr>
-            <tr class="day">
-                <td>Tuesday</td>
-                <td>1</td>
-            </tr>
-            <tr class="day">
-                <td>Wednesday</td>
-                <td>2</td>
-            </tr>
-            <tr class="day">
-                <td>Thursday</td>
-                <td>3</td>
-            </tr>
-            <tr class="day">
-                <td>Friday</td>
-                <td>4</td>
-            </tr>
-            <tr class="day">
-                <td>Saturday</td>
-                <td>5</td>
-            </tr>
-            <tr class="day">
-                <td>Sunday</td>
-                <td>6</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <form class="main__todo-form">
+        <label>
+            <input class="main__todo-input" type="text" placeholder="Write here">
+        </label>
+        <button class="main__add-button" type="submit">+</button>
+    </form>
+    <ul class="main__todo-items"></ul>
 </main>
 <footer>
     <section class="contact-info">
         <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">WhatsApp </a></li>
-            <li><a href="#">Email</a></li>
+            <li><a href="https://t.me/turttIe" target="_blank">Telegram</a></li>
+            <li><a href="https://wa.me/79811412301" target="_blank">WhatsApp</a></li>
+            <li><a href="mailto:super.ivannikov2013@yandex.ru" target="_blank">Email</a></li>
         </ul>
     </section>
     <section class="page-loading">

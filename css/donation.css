@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: #222222;
+    background-color: #222;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -108,70 +108,45 @@ header ul li a:hover {
 }
 
 .contact-info li a:hover {
-    color: #555555;
+    color: #555;
 }
 
-.overlay {
-    font-family: "Cinzel", sans-serif;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../../14turtle14.github.io/image/flag_1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 60px;
-    box-sizing: border-box;
+.table-container{
+    font-family: "Overpass", sans-serif;
+    display: grid;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.donation-table {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    background-color: white;
+}
+
+.donation-table caption {
+    font-size: 24px;
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
-.introduction {
-    padding: 1%;
-}
-
-.introduction_header{
+.donation-table th, .donation-table td {
+    border: none;
+    padding: 10px;
     text-align: center;
-    font-family: "Overpass", sans-serif;
+    height: 50px;
+    width: 900px;
+
 }
 
-.introduction_text{
-    text-align: left;
-    font-family: "Overpass", sans-serif;
-    padding-left: 40px;
+.person:nth-child(even) {
+    background-color: darkred;
+    color: #eae4e4;
 }
 
-.functionality_header{
-    text-align: center;
-    font-family: "Overpass", sans-serif;
-    list-style-type: none;
-}
-
-.functionality_list {
-    list-style-type: none;
-    font-family: "Overpass", sans-serif;
-    text-align: left;
-}
-
-.reasons_header{
-    text-align: center;
-    font-family: "Overpass", sans-serif;
-    list-style-type: none;
-}
-
-.reasons_list {
-    list-style-type: none;
-    font-family: "Overpass", sans-serif;
-    text-align: left;
-}
-
-.reasons {
-    padding: 1%;
-}
-
-.functionality{
-    padding: 1%;
+.person td {
+    padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -183,12 +158,12 @@ header ul li a:hover {
         margin-right: 10px;
     }
 
-    .overlay{
-        text-align: center;
-    }
-
     .logo{
         display: none;
+    }
+
+    .table-container{
+        padding-top: 30vh;
     }
 }
 
@@ -196,10 +171,6 @@ header ul li a:hover {
 
     header nav ul li {
         margin-right: 10px;
-    }
-
-    .overlay{
-        text-align: center;
     }
 
     .logo{
@@ -222,11 +193,11 @@ header ul li a:hover {
     color: white;
 }
 
-header nav ul li a.active {
-    color: firebrick;
-}
-
 .load-time {
     color: firebrick;
     padding: 0 0.5vh;
+}
+
+header nav ul li a.active {
+    color: firebrick;
 }
