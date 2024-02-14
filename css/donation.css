@@ -201,3 +201,22 @@ header ul li a:hover {
 header nav ul li a.active {
     color: firebrick;
 }
+
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: firebrick;
+    border-radius: 1vh;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    transition: color 0.3s ease-in-out;
+    background-color: darkred;
+}
+
+header nav ul li a.active:hover {
+    color: darkred;
+}

@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Progress</title>
-    <meta name="description" content="See your progress" />
-    <link rel="stylesheet" href="/css/progress.css">
+    <title>Culture</title>
+    <meta name="description" content="Take a look chinese culture, you can leave your comment below" />
+    <link rel="stylesheet" href="/css/culture.css">
     <meta name="robots" content="index, nofollow" />
     <meta name="yandex" content="noyaca" />
     <script src="/js/pageLoadStats.js"></script>
     <script src="/js/activeWindow.js" defer></script>
-    <script src="/js/form.js" defer></script>
+    <script src="/js/promise.js" defer></script>
+    <script type="module" src="../js/env.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Ivannikov Dannil" />
 </head>
@@ -30,13 +31,12 @@
     </nav>
 </header>
 <main class="main-content">
-    <form class="main__todo-form">
-        <label>
-            <input class="main__todo-input" type="text" placeholder="Write here">
-        </label>
-        <button class="main__add-button" type="submit">+</button>
-    </form>
-    <ul class="main__todo-items"></ul>
+    <div id="photo-container"></div>
+    <div class="preloader-container" id="preloader-container">
+        <div class="preloader"></div>
+    </div>
+    <button id="next-button"> > </button>
+    <button id="back-button"> < </button>
 </main>
 <footer>
     <section class="contact-info">
