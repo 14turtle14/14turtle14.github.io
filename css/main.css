@@ -131,36 +131,36 @@ header ul li a:hover {
     padding: 1%;
 }
 
-.introduction_header{
+.header_introduction{
     text-align: center;
     font-family: "Overpass", sans-serif;
 }
 
-.introduction_text{
+.text_introduction{
     text-align: left;
     font-family: "Overpass", sans-serif;
     padding-left: 40px;
 }
 
-.functionality_header{
+.header_functionality{
     text-align: center;
     font-family: "Overpass", sans-serif;
     list-style-type: none;
 }
 
-.functionality_list {
+.list_functionality {
     list-style-type: none;
     font-family: "Overpass", sans-serif;
     text-align: left;
 }
 
-.reasons_header{
+.header_reasons{
     text-align: center;
     font-family: "Overpass", sans-serif;
     list-style-type: none;
 }
 
-.reasons_list {
+.list_reasons {
     list-style-type: none;
     font-family: "Overpass", sans-serif;
     text-align: left;

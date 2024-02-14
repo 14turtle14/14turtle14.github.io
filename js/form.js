@@ -1,9 +1,9 @@
 let todoForm;
-todoForm = document.querySelector('.main__todo-form');
+todoForm = document.querySelector('.todo-form');
 let todoInput;
-todoInput = document.querySelector('.main__todo-input');
+todoInput = document.querySelector('.todo-input');
 let todoItemsList;
-todoItemsList = document.querySelector('.main__todo-items');
+todoItemsList = document.querySelector('.todo-items');
 
 let todos = [];
 
@@ -18,6 +18,17 @@ const addToDo = (item) => {
         todos.push(todo);
         addToLocalStorage(todos);
         todoInput.value = '';
+
+        Toastify({
+            text: "New task has been added successfully",
+            duration: 5000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "firebrick",
+            className: "toast",
+        }).showToast();
+
     }
 }
 
@@ -73,6 +84,16 @@ function deleteTodo(id) {
         return item.id != id;
     });
     addToLocalStorage(todos);
+
+    Toastify({
+        text: "Task has been deleted successfully",
+        duration: 5000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "firebrick",
+        className: "toast",
+    }).showToast();
 }
 
 getFromLocalStorage();

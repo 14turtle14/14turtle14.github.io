@@ -15,5 +15,8 @@
   ],
   "author": "14turtle14",
   "license": "UNLICENSED",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "toastify-js": "^1.12.0"
+  }
 }

@@ -1,155 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #222222;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-
-header {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    grid-row: 1;
-    width: 100vw;
-    justify-content: left;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 10px;
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-footer {
-    grid-row: 3;
-    background-color: #222;
-    display: flex;
-    justify-content: center;
-    margin: 1vw;
-    align-items: flex-end;
-    font-family: "Cinzel", sans-serif;
-}
-
-header ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-header ul li {
-    margin-right: 30px;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-    font-size: 28px;
-    font-family: "Cinzel", sans-serif;
-    padding: 0.1em;
-}
-
-header ul li a:hover {
-    color: #555;
-}
-
-.logo img {
-    height: auto;
-    width: 100px;
-}
-
-.logo {
-    order: -1;
-    margin-right: 3vh;
-}
-
-.logo:hover{
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
-}
-
-.contact-info {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    text-align: left;
-    flex-grow: 1;
-}
-
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.contact-info ul li{
-    margin-right: 20px;
-}
-
-.contact-info li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.contact-info li a:hover {
-    color: #555555;
-}
-
-@media only screen and (max-width: 768px) {
-    header, footer {
-        padding: 20px;
-    }
-
-    header nav ul li {
-        margin-right: 10px;
-    }
-
-    .logo{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-
-    header nav ul li {
-        margin-right: 10px;
-    }
-
-    .logo{
-        display: none;
-    }
-}
-
-.page-loading {
-    list-style-type: none;
-    display: flex;
-    text-align: right;
-    padding-right: 1%   ;
-}
-
-#loading-info {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    color: white;
-}
-
-header nav ul li a.active {
-    color: firebrick;
-}
 
 button:hover {
     cursor: pointer;
@@ -166,26 +15,25 @@ button:hover {
      background-color: white;
  }
 
-.main__todo-form {
+.todo-form {
     margin: 3vh;
 }
 
-.main__todo-input {
+.todo-input {
     border: none;
     outline: none;
     border-radius: 2vw;
     padding: 2vh;
     font-size: 36px;
+    font-family: Overpass, sans-serif;
 }
 
-.main__todo-items{
-    padding: 0;
-}
-.main__todo-items li{
+.todo-items li{
+    font-family: Overpass, sans-serif;
     list-style-type: none;
 }
 
-.main__add-button {
+.add-button {
     background-color: firebrick;
     color: white;
     border: none;
@@ -193,9 +41,11 @@ button:hover {
     border-radius: 2vh;
     padding: 2vh;
     font-size: 35px;
+    font-family: Overpass, sans-serif;
 }
 
 .todo-items {
+    padding: 0;
     min-width: 50vh;
     margin-left: auto;
     margin-right: auto;
@@ -232,6 +82,7 @@ button:hover {
     margin-left: 1vh;
     font-size: 1rem;
     font-weight: 500;
+    font-family: Overpass, sans-serif;
 }
 
 .checked{
@@ -239,14 +90,14 @@ button:hover {
 }
 
 @media only screen and (max-width: 400px) {
-    .main__todo-input {
+    .todo-input {
         border-radius: 1vh;
         padding: 1vh;
         margin-right: 2vh;
         font-size: 2vh;
     }
 
-    .main__add-button {
+    .add-button {
         border-radius: 1vh;
         padding: 1vh;
         font-size: 2vh;
@@ -261,26 +112,7 @@ button:hover {
     }
 }
 
-.load-time {
-    color: firebrick;
-    padding: 0 0.5vh;
-}
-
-::-webkit-scrollbar{
-    width: 7px;
-    background-color: white;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: firebrick;
-    border-radius: 1vh;
-}
-
-::-webkit-scrollbar-thumb:vertical:hover {
-    transition: color 0.3s ease-in-out;
-    background-color: darkred;
-}
-
-header nav ul li a.active:hover {
-    color: darkred;
+.toast {
+    font-family: Cinzel, sans-serif;
+    font-weight: bold;
 }
