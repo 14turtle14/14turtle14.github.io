@@ -115,7 +115,7 @@ header ul li a:hover {
     font-family: "Cinzel", sans-serif;
     width: 100vw;
     height: 100vh;
-    background-image: url('../../14turtle14.github.io/image/flag_3.jpg');
+    background-image: url('/image/flag_3.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

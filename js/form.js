@@ -28,7 +28,6 @@ const addToDo = (item) => {
             backgroundColor: "firebrick",
             className: "toast",
         }).showToast();
-
     }
 }
 

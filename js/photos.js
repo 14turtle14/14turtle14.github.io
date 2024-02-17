@@ -65,7 +65,15 @@ async function fetchRandomChinesePhotoWithDelay() {
             throw new Error('No images found');
         }
     } catch (error) {
-        console.error('Error fetching random Chinese photo:', error);
+        Toastify({
+            text: "Error",
+            duration: 5000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "firebrick",
+            className: "toast",
+        }).showToast();
     }
 }
 
