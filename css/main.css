@@ -21,7 +21,7 @@ header {
     justify-content: left;
     background-color: #222;
     color: #fff;
-    padding: 10px 10px;
+    padding: 1vh 1vw;
     text-align: center;
     flex-wrap: wrap;
 }
@@ -45,7 +45,7 @@ header ul {
 }
 
 header ul li {
-    margin-right: 30px;
+    margin-right: 3vw;
 }
 
 header ul li a {
@@ -53,7 +53,7 @@ header ul li a {
     color: #fff;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-    font-size: 28px;
+    font-size: 2em;
     font-family: "Cinzel", sans-serif;
     padding: 0.1em;
 }
@@ -97,7 +97,7 @@ header ul li a:hover {
 }
 
 .contact-info ul li{
-    margin-right: 20px;
+    margin-right: 2vw;
 }
 
 .contact-info li a {
@@ -115,14 +115,14 @@ header ul li a:hover {
     font-family: "Cinzel", sans-serif;
     width: 100vw;
     height: 100vh;
-    background-image: url('/image/flag_3.jpg');
+    background-image: url('../image/flag_3.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 60px;
+    font-size: 4em;
     box-sizing: border-box;
     font-weight: bold;
 }
@@ -139,7 +139,7 @@ header ul li a:hover {
 .text_introduction{
     text-align: left;
     font-family: "Overpass", sans-serif;
-    padding-left: 40px;
+    padding-left: 4vw;
 }
 
 .header_functionality{
@@ -176,11 +176,11 @@ header ul li a:hover {
 
 @media only screen and (max-width: 768px) {
     header, footer {
-        padding: 20px;
+        padding: 2vw;
     }
 
     header nav ul li {
-        margin-right: 10px;
+        margin-right: 1vw;
     }
 
     .overlay{
@@ -195,7 +195,7 @@ header ul li a:hover {
 @media only screen and (max-width: 480px) {
 
     header nav ul li {
-        margin-right: 10px;
+        margin-right: 1vw;
     }
 
     .overlay{
@@ -208,6 +208,7 @@ header ul li a:hover {
 }
 
 .page-loading {
+    font-family: Cinzel, sans-serif;
     list-style-type: none;
     display: flex;
     text-align: right;
@@ -232,7 +233,7 @@ header nav ul li a.active {
 }
 
 ::-webkit-scrollbar{
-    width: 7px;
+    width: 0.5vw;
     background-color: white;
 }
 

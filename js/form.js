@@ -1,91 +1,69 @@
-let todoForm;
-todoForm = document.querySelector('.todo-form');
-let todoInput;
-todoInput = document.querySelector('.todo-input');
-let todoItemsList;
-todoItemsList = document.querySelector('.todo-items');
+const todoForm = document.querySelector('.todo-form');
+const todoInput = document.querySelector('.todo-input');
+const todoItemsList = document.querySelector('.todo-items');
 
 let todos = [];
 
 const addToDo = (item) => {
-    if (item !== '') {
-        const todo = {
-            id: Date.now(),
-            name: item,
-            completed: false
-        };
+    if (item.trim() === '') return;
 
-        todos.push(todo);
-        addToLocalStorage(todos);
-        todoInput.value = '';
+    const todo = {
+        id: Date.now(),
+        name: item,
+        completed: false
+    };
 
-        Toastify({
-            text: "New task has been added successfully",
-            duration: 5000,
-            close: true,
-            gravity: "top",
-            position: "right",
-            backgroundColor: "firebrick",
-            className: "toast",
-        }).showToast();
-    }
-}
+    todos.push(todo);
+    updateTodos();
+    todoInput.value = '';
+
+    showToast("New task has been added successfully");
+};
 
 todoForm.addEventListener('submit', (event) => {
     event.preventDefault();
     addToDo(todoInput.value);
 });
 
-function addToLocalStorage(todos) {
+function updateTodos() {
+    renderTodos();
+    saveToLocalStorage();
+}
+
+function renderTodos() {
+    todoItemsList.innerHTML = todos.map(todo => {
+        const checked = todo.completed ? 'checked' : '';
+        return `
+            <li class="item ${todo.completed ? 'completed' : ''}" data-key="${todo.id}">
+                <input type="checkbox" class="checkbox" ${checked}>
+                ${todo.name}
+                <button class="delete-button">X</button>
+            </li>
+        `;
+    }).join('');
+}
+
+function saveToLocalStorage() {
     localStorage.setItem('todos', JSON.stringify(todos));
-    renderTodos(todos);
-}
-
-function renderTodos(todos) {
-    todoItemsList.innerHTML = '';
-    todos.forEach(function (item) {
-        const checked = item.completed ? 'checked' : null;
-        const li = document.createElement('li');
-        li.setAttribute('class', 'item');
-        li.setAttribute('data-key', item.id);
-        if (item.completed == true) {
-            li.classList.add('checked');
-        }
-        li.innerHTML = `
-      <input type="checkbox" class="checkbox" ${checked}>
-      ${item.name}
-      <button class="delete-button">X</button>
-    `;
-        todoItemsList.append(li);
-    });
-}
-
-function getFromLocalStorage() {
-    const reference = localStorage.getItem('todos');
-    if (reference) {
-        todos = JSON.parse(reference);
-        renderTodos(todos);
-    }
 }
 
 function toggle(id) {
-    todos.forEach(function (item) {
-        console.log(item.id, id)
-        if (item.id == id) {
-            item.completed = !item.completed;
-        }
-    });
-    addToLocalStorage(todos);
+    const todo = todos.find(todo => todo.id == id);
+    if (todo) {
+        todo.completed = !todo.completed;
+        updateTodos();
+    }
 }
 
 function deleteTodo(id) {
-    todos = todos.filter(function (item) {
-        return item.id != id;
-    });
-    addToLocalStorage(todos);
+    todos = todos.filter(todo => todo.id != id);
+    updateTodos();
+    showToast("Task has been deleted successfully");
+}
 
+function showToast(message) {
     Toastify({
-        text: "Task has been deleted successfully",
+        text: message,
         duration: 5000,
         close: true,
         gravity: "top",
@@ -95,13 +73,20 @@ function deleteTodo(id) {
     }).showToast();
 }
 
+function getFromLocalStorage() {
+    const storedTodos = localStorage.getItem('todos');
+    if (storedTodos) {
+        todos = JSON.parse(storedTodos);
+        renderTodos();
+    }
+}
+
 getFromLocalStorage();
 
 todoItemsList.addEventListener('click', function (event) {
     if (event.target.type == 'checkbox') {
-        toggle(event.target.parentElement.getAttribute('data-key'));
-    }
-    if (event.target.classList.contains('delete-button')) {
-        deleteTodo(event.target.parentElement.getAttribute('data-key'));
+        toggle(event.target.parentElement.dataset.key);
+    } else if (event.target.classList.contains('delete-button')) {
+        deleteTodo(event.target.parentElement.dataset.key);
     }
 });

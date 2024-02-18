@@ -1,40 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Fjalla+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
-
-.table-container{
+.table-container {
     font-family: "Overpass", sans-serif;
-    display: grid;
     padding-top: 20vh;
     padding-bottom: 20vh;
 }
 
 .donation-table {
     width: 100%;
-    display: grid;
-    grid-auto-rows: auto;
+    border-collapse: collapse;
     background-color: white;
 }
 
 .donation-table caption {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: 1vh;
 }
 
 .donation-table th, .donation-table td {
-    border: none;
-    padding: 10px;
+    padding: 1%;
     text-align: center;
-    height: 50px;
-    width: 900px;
-
+    height: 5vh;
 }
 
 .person:nth-child(even) {
     background-color: darkred;
-    color: #eae4e4;
+    color: white;
 }
 
 .person td {
-    padding: 10px;
+    padding: 1%;
 }

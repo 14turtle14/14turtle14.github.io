@@ -1,4 +1,4 @@
-function measurePageLoadTime() {
+(function measurePageLoadTime() {
     const loadTime = performance.now();
     const loadingInfo = document.getElementById("loading-info");
 
@@ -7,7 +7,5 @@ function measurePageLoadTime() {
     } else {
         console.error("Element with id 'loading-info' not found");
     }
-}
-
-window.addEventListener("load", measurePageLoadTime);
+})();
 

@@ -8,39 +8,45 @@ let currentIndex = pastPhotos.length - 1;
 
 nextButton.addEventListener('click', showNextPhoto);
 backButton.addEventListener('click', showPreviousPhoto);
-window.onload = showCurrentPhoto;
+window.onload = fetchRandomChinesePhoto()
 
-window.addEventListener('beforeunload', function() {
-    sessionStorage.setItem('pastPhotos', JSON.stringify(pastPhotos));
-});
+window.addEventListener('unload', saveToLocalStorage);
 
-function showNextPhoto() {
+async function showNextPhoto() {
+
     if (currentIndex < pastPhotos.length - 1) {
         currentIndex++;
-        displayPhoto(pastPhotos[currentIndex]);
+        showCurrentPhoto();
     } else {
-        fetchRandomChinesePhotoWithDelay();
+        await fetchRandomChinesePhoto()
     }
 }
+
+function hidePhoto() {
+    photoContainer.style.display = 'none';
+}
+
 
 function showPreviousPhoto() {
     if (currentIndex > 0) {
         currentIndex--;
-        displayPhoto(pastPhotos[currentIndex]);
+        showCurrentPhoto();
+    }
+    else {
+        showToast("You reach the beginning of the list")
     }
 }
 
 function showCurrentPhoto() {
+    photoContainer.style.display = 'flex';
     if (currentIndex >= 0 && currentIndex < pastPhotos.length) {
         displayPhoto(pastPhotos[currentIndex]);
     }
 }
 
-async function fetchRandomChinesePhotoWithDelay() {
-    photoContainer.innerHTML = '';
-
+async function fetchRandomChinesePhoto() {
+    hidePhoto();
     showPreloader();
-
     try {
         const response = await fetch("https://pixabay.com/api/?key=" + '42344770-f8625a3f1ee300f7e37ff3a39' + "&q=" + encodeURIComponent('chinese culture'));
 
@@ -55,26 +61,24 @@ async function fetchRandomChinesePhotoWithDelay() {
             const imageUrl = data.hits[randomIndex].webformatURL;
 
             setTimeout(() => {
-                displayPhoto(imageUrl);
                 pastPhotos.push(imageUrl);
                 currentIndex = pastPhotos.length - 1;
-                sessionStorage.setItem('pastPhotos', JSON.stringify(pastPhotos));
+                saveToLocalStorage();
                 hidePreloader();
-            }, 2000);
+                showCurrentPhoto();
+            }, 3000);
         } else {
             throw new Error('No images found');
         }
     } catch (error) {
-        Toastify({
-            text: "Error",
-            duration: 5000,
-            close: true,
-            gravity: "top",
-            position: "right",
-            backgroundColor: "firebrick",
-            className: "toast",
-        }).showToast();
+        showToast("Oops, something went wrong");
+        hidePreloader();
     }
+}
+
+
+function saveToLocalStorage() {
+    sessionStorage.setItem('pastPhotos', JSON.stringify(pastPhotos));
 }
 
 function showPreloader() {
@@ -93,4 +97,14 @@ function displayPhoto(imageUrl) {
     photoContainer.appendChild(imageElement);
 }
 
-fetchRandomChinesePhotoWithDelay()
+function showToast(message) {
+    Toastify({
+        text: message,
+        duration: 5000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "firebrick",
+        className: "toast",
+    }).showToast();
+}
