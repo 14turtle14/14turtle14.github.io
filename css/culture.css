@@ -67,3 +67,16 @@
     background-color: darkred;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 480px) {
+     #photo-container{
+         max-width: 100%; /* Максимальная ширина изображения */
+         width: 50%;
+         height: 60%;
+         justify-content: center;
+    }
+
+    .main-content{
+        flex-wrap: wrap;
+    }
+}

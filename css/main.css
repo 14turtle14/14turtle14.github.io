@@ -190,9 +190,17 @@ header ul li a:hover {
     .logo{
         display: none;
     }
+
+    header nav ul li a{
+        font-size: 1.5em;
+    }
 }
 
 @media only screen and (max-width: 480px) {
+
+    header, footer {
+        padding: 0;
+    }
 
     header nav ul li {
         margin-right: 1vw;
@@ -204,6 +212,22 @@ header ul li a:hover {
 
     .logo{
         display: none;
+    }
+
+    p#loading-info{
+        display: none;
+    }
+
+    footer{
+        flex-wrap: wrap;
+    }
+
+    .contact-info, nav ul{
+        justify-content: center;
+    }
+
+    header nav ul li a{
+        font-size: 1.25em;
     }
 }
 
