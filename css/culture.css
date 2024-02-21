@@ -70,7 +70,7 @@
 
 @media only screen and (max-width: 480px) {
      #photo-container{
-         max-width: 100%; /* Максимальная ширина изображения */
+         max-width: 100%;
          width: 50%;
          height: 60%;
          justify-content: center;

@@ -8,6 +8,27 @@
     width: 100%;
     border-collapse: collapse;
     background-color: white;
+    display: grid;
+    grid-template: "c"
+                   "l"
+                   "r"
+}
+
+
+.donation-table caption{ grid-area: c; }
+.donation-table thead {
+    grid-area: l;
+    display: grid;
+
+}
+.donation-table tbody {
+    grid-area: r;
+    display: grid;
+}
+
+.donation-table tr{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
 }
 
 .donation-table caption {
@@ -16,10 +37,16 @@
     padding-bottom: 1vh;
 }
 
+.donation-table tr thead tbody{
+    display: contents;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+
 .donation-table th, .donation-table td {
     padding: 1%;
     text-align: center;
     height: 5vh;
+    place-items: center;
 }
 
 .person:nth-child(even) {

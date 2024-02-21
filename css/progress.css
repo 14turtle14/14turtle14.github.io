@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
+
 button:hover {
     cursor: pointer;
     background-color: darkred;
@@ -5,13 +7,13 @@ button:hover {
 }
 
 .main-content {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 43vh 0;
-     grid-row: 2;
-     background-color: white;
- }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 43vh 0;
+    grid-row: 2;
+    background-color: white;
+}
 
 .todo-form {
     margin: 3vh;
@@ -22,7 +24,7 @@ button:hover {
     outline: none;
     border-radius: 2vw;
     padding: 2vh;
-    font-size: 2em;
+    font-size: 36px;
     font-family: Overpass, sans-serif;
 }
 
@@ -38,7 +40,7 @@ button:hover {
     outline: none;
     border-radius: 2vh;
     padding: 2vh;
-    font-size: 2em;
+    font-size: 35px;
     font-family: Overpass, sans-serif;
 }
 
@@ -51,7 +53,7 @@ button:hover {
 
 .item {
     padding: 2vh;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     justify-content: left;
 }
 
@@ -78,12 +80,12 @@ button:hover {
     border-radius: 1vh;
     padding: 0.4vh;
     margin-left: 1vh;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 500;
     font-family: Overpass, sans-serif;
 }
 
-.todo-items .item.completed {
+.checked{
     text-decoration: line-through;
 }
 
@@ -102,11 +104,11 @@ button:hover {
     }
 
     .item {
-        padding: 0.6vh;
-        font-size: 1em;
+        padding: 6px;
+        font-size: 1rem;
     }
     .delete-button {
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 

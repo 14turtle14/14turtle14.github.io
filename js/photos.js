@@ -48,7 +48,8 @@ async function fetchRandomChinesePhoto() {
     hidePhoto();
     showPreloader();
     try {
-        const response = await fetch("https://pixabay.com/api/?key=" + '42344770-f8625a3f1ee300f7e37ff3a39' + "&q=" + encodeURIComponent('chinese culture'));
+        const randomIndex = Math.floor(Math.random() * 100);
+        const response = await fetch("https://pixabay.com/api/?key=" + '42344770-f8625a3f1ee300f7e37ff3a39' + "&q=" + encodeURIComponent('chinese culture') + "&per_page=10" + `&page=${randomIndex}`);
 
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -57,7 +58,6 @@ async function fetchRandomChinesePhoto() {
         const data = await response.json();
 
         if (data.hits.length > 0) {
-            const randomIndex = Math.floor(Math.random() * data.hits.length);
             const imageUrl = data.hits[randomIndex].webformatURL;
 
             setTimeout(() => {
